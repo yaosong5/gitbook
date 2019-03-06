@@ -1,0 +1,677 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据分析总结-pandas · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数据分析总结-numpy.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Initial page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Mac环境配置/">
+            
+                <a href="../Mac环境配置/">
+            
+                    
+                    Mac环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Mac环境配置/python环境变量.html">
+            
+                <a href="../Mac环境配置/python环境变量.html">
+            
+                    
+                    1.python配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    部署记录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../部署记录/blog文档md模板.html">
+            
+                <a href="../部署记录/blog文档md模板.html">
+            
+                    
+                    1.blog文档md模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../部署记录/Compose-bigdatabase-单组件启动.html">
+            
+                <a href="../部署记录/Compose-bigdatabase-单组件启动.html">
+            
+                    
+                    2.Compose-bigdatabase-单组件启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../部署记录/Compose-Spark组件-单独启动.html">
+            
+                <a href="../部署记录/Compose-Spark组件-单独启动.html">
+            
+                    
+                    3.Compose-Spark组件-单独启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+            
+                <a href="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+            
+                    
+                    4.Docker-通过dockerfile构建镜像(需测试)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+            
+                <a href="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+            
+                    
+                    5.docker-yaosong5仓库dockerImages汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../部署记录/Docker基础镜像中-所有home配置.html">
+            
+                <a href="../部署记录/Docker基础镜像中-所有home配置.html">
+            
+                    
+                    6.Docker基础镜像中-所有home配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../部署记录/linux安装python3.html">
+            
+                <a href="../部署记录/linux安装python3.html">
+            
+                    
+                    7.linux安装python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    实际问题解决
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../实际问题解决/kafka异常.html">
+            
+                <a href="../实际问题解决/kafka异常.html">
+            
+                    
+                    kafka异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                <a href="../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                    
+                    数仓-解决hive处理异常json命令行转义字符的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    数据分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.5.1" data-path="数据分析总结-pandas.html">
+            
+                <a href="数据分析总结-pandas.html">
+            
+                    
+                    数据分析总结-pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="数据分析总结-numpy.html">
+            
+                <a href="数据分析总结-numpy.html">
+            
+                    
+                    数据分析总结-numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                    应用环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../应用环境/Docker环境启动流程.html">
+            
+                <a href="../应用环境/Docker环境启动流程.html">
+            
+                    
+                    Docker环境启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据分析总结-pandas</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<p><a href="http://pandas.pydata.org/" target="_blank">pandas&#x5B98;&#x7F51;</a></p>
+<h1 id="&#x4E00;&#x3001;series">&#x4E00;&#x3001;Series</h1>
+<ul>
+<li>Series&#x662F;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</li>
+</ul>
+<h2 id="&#x8D4B;&#x503C;">&#x8D4B;&#x503C;</h2>
+<ul>
+<li>pandas&#x4F1A;&#x9ED8;&#x8BA4;&#x7528;0&#x5230;n&#x6765;&#x4F5C;&#x4E3A;Series&#x7684;index&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x6307;&#x5B9A;index</li>
+</ul>
+<pre><code class="lang-python">s = pd.Series([<span class="hljs-number">7</span>, <span class="hljs-string">&apos;Beijing&apos;</span>, <span class="hljs-number">2.17</span>, <span class="hljs-number">-1232</span>, <span class="hljs-string">&apos;Happy birthday!&apos;</span>])
+</code></pre>
+<ul>
+<li>&#x8FD8;&#x53EF;&#x4EE5;&#x7528;dictionary&#x6765;&#x6784;&#x9020;&#x4E00;&#x4E2A;Series&#xFF0C;&#x56E0;&#x4E3A;Series&#x672C;&#x6765;&#x5C31;&#x662F;key value pairs&#x3002;</li>
+</ul>
+<pre><code class="lang-python">cities = {<span class="hljs-string">&apos;Beijing&apos;</span>: <span class="hljs-number">55000</span>, <span class="hljs-string">&apos;Shanghai&apos;</span>: <span class="hljs-number">60000</span>, <span class="hljs-string">&apos;Shenzhen&apos;</span>: <span class="hljs-number">50000</span>, <span class="hljs-string">&apos;Hangzhou&apos;</span>:<span class="hljs-number">20000</span>, 
+<span class="hljs-string">&apos;Guangzhou&apos;</span>: <span class="hljs-number">25000</span>, <span class="hljs-string">&apos;Suzhou&apos;</span>: <span class="hljs-keyword">None</span>}
+apts = pd.Series(cities)
+</code></pre>
+<p>&#x524D;&#x9762;&#x5B9A;&#x4E49;&#x7684;<strong>index</strong>&#x5C31;&#x662F;&#x7528;&#x6765;&#x9009;&#x62E9;&#x6570;&#x636E;&#x7684;</p>
+<p>apts[apts &lt;= 50000] = 40000</p>
+<h2 id="&#x53D6;&#x503C;">&#x53D6;&#x503C;</h2>
+<p>boolean indexing&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5230;pandas&#x4E2D;&#x6765;&#x53D6;&#x503C;</p>
+<p>apts[apts &lt; 50000]</p>
+<h2 id="&#x6570;&#x5B66;&#x8FD0;&#x7B97;">&#x6570;&#x5B66;&#x8FD0;&#x7B97;</h2>
+<ul>
+<li>apts / 2</li>
+<li>apts * 2</li>
+<li>np.square(apts)<ul>
+<li>square&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210; <strong>  &#xFF1A;apts </strong> 2</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x6570;&#x636E;&#x7F3A;&#x5931;">&#x6570;&#x636E;&#x7F3A;&#x5931;</h2>
+<ul>
+<li><p>apts.notnull()</p>
+</li>
+<li><p>apts.isnull()&#xFF1A; </p>
+<ul>
+<li>apts[apts.isnull()]  &#x83B7;&#x53D6;&#x503C;&#x4E3A;&#x7A7A;&#x7684;key&#xFF0C;value</li>
+<li>apts[apts.isnull() == False] &#x83B7;&#x53D6;&#x503C;&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;key&#xFF0C;value</li>
+</ul>
+<p>&#x200B;</p>
+</li>
+</ul>
+<h1 id="&#x4E8C;&#x3001;dataframe">&#x4E8C;&#x3001;DataFrame</h1>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html" target="_blank">dataframe&#x8BE6;&#x7EC6;&#x89E3;&#x6790;</a></p>
+<p>&#x4E00;&#x4E2A;Dataframe&#x5C31;&#x662F;&#x4E00;&#x5F20;&#x8868;&#x683C;&#xFF0C;Series&#x8868;&#x793A;&#x7684;&#x662F;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;Dataframe&#x5219;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x7C7B;&#x6BD4;&#x6210;&#x4E00;&#x5F20;excel&#x7684;spreadsheet&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x628A;Dataframe&#x5F53;&#x505A;&#x4E00;&#x7EC4;Series&#x7684;&#x96C6;&#x5408;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;dataframe">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;DataFrame</h2>
+<p>dataframe&#x53EF;&#x4EE5;&#x7531;&#x4E00;&#x4E2A;dictionary&#x6784;&#x9020;&#x5F97;&#x5230;&#x3002;</p>
+<pre><code class="lang-python">data = {<span class="hljs-string">&apos;city&apos;</span>: [<span class="hljs-string">&apos;Beijing&apos;</span>, <span class="hljs-string">&apos;Shanghai&apos;</span>, <span class="hljs-string">&apos;Guangzhou&apos;</span>, <span class="hljs-string">&apos;Shenzhen&apos;</span>, <span class="hljs-string">&apos;Hangzhou&apos;</span>, <span class="hljs-string">&apos;Chongqing&apos;</span>],<span class="hljs-string">&apos;year&apos;</span>: [<span class="hljs-number">2016</span>,<span class="hljs-number">2017</span>,<span class="hljs-number">2016</span>,<span class="hljs-number">2017</span>,<span class="hljs-number">2016</span>, <span class="hljs-number">2016</span>],<span class="hljs-string">&apos;population&apos;</span>: [<span class="hljs-number">2100</span>, <span class="hljs-number">2300</span>, <span class="hljs-number">1000</span>, <span class="hljs-number">700</span>, <span class="hljs-number">500</span>, <span class="hljs-number">500</span>]}
+pd.DataFrame(data)
+</code></pre>
+<p>columns&#x7684;&#x540D;&#x5B57;&#x548C;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;</p>
+<pre><code class="lang-python">pd.DataFrame(data, columns = [<span class="hljs-string">&apos;year&apos;</span>, <span class="hljs-string">&apos;city&apos;</span>, <span class="hljs-string">&apos;population&apos;</span>])
+</code></pre>
+<h2 id="&#x4ECE;dataframe&#x91CC;&#x9009;&#x62E9;&#x6570;&#x636E;">&#x4ECE;DataFrame&#x91CC;&#x9009;&#x62E9;&#x6570;&#x636E;</h2>
+<ul>
+<li>frame2[&apos;city&apos;] = frame2.city</li>
+<li>frame2.ix[&apos;three&apos;]&#xFF1A; &#x8FD9;&#x79CD;&#x662F;&#x9009;&#x53D6;&#x884C;index</li>
+<li>frame2.ix[2] &#xFF1A;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x7528;&#x6765;&#x9009;&#x5217;&#x800C;&#x4E0D;&#x662F;&#x9009;&#x884C;</li>
+<li>&#x8FD8;&#x53EF;&#x4EE5;&#x7528;Series&#x6765;&#x6307;&#x5B9A;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;index&#x4EE5;&#x53CA;&#x76F8;&#x5BF9;&#x5E94;&#x7684;value&#xFF0C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x9ED8;&#x8BA4;&#x7528;NaN.</li>
+</ul>
+<pre><code class="lang-python">val = pd.Series([<span class="hljs-number">200</span>, <span class="hljs-number">300</span>, <span class="hljs-number">500</span>], index=[<span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>, <span class="hljs-string">&apos;five&apos;</span>])
+</code></pre>
+<ul>
+<li>&#x6307;&#x5B9A;index&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</li>
+</ul>
+<pre><code class="lang-Python">frame3[<span class="hljs-string">&apos;Beijing&apos;</span>][<span class="hljs-number">1</span>:<span class="hljs-number">3</span>]
+frame3[<span class="hljs-string">&apos;Shanghai&apos;</span>][:<span class="hljs-number">-1</span>]
+pdata = {<span class="hljs-string">&apos;Beijing&apos;</span>: frame3[<span class="hljs-string">&apos;Beijing&apos;</span>][:<span class="hljs-number">-1</span>], <span class="hljs-string">&apos;Shanghai&apos;</span>:frame3[<span class="hljs-string">&apos;Shanghai&apos;</span>][:<span class="hljs-number">-1</span>]}
+</code></pre>
+<ul>
+<li>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;index&#x7684;&#x540D;&#x5B57;&#x548C;&#x5217;&#x7684;&#x540D;&#x5B57;</li>
+</ul>
+<pre><code class="lang-Python">frame3.index.name = <span class="hljs-string">&apos;year&apos;</span>
+frame3.columns.name = <span class="hljs-string">&apos;city&apos;</span>
+</code></pre>
+<h2 id="dataframe&#x5143;&#x7D20;&#x8D4B;&#x503C;">DataFrame&#x5143;&#x7D20;&#x8D4B;&#x503C;</h2>
+<pre><code class="lang-Python">fram2[<span class="hljs-string">&quot;population&quot;</span>][<span class="hljs-string">&quot;one&quot;</span>] = <span class="hljs-number">2200</span>
+</code></pre>
+<h2 id="&#x5176;&#x4ED6;&#x8FD0;&#x7B97;">&#x5176;&#x4ED6;&#x8FD0;&#x7B97;</h2>
+<ul>
+<li>&#x4E00;&#x4E2A;DataFrame&#x5C31;&#x548C;&#x4E00;&#x4E2A;numpy 2d array&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x8F6C;&#x7F6E;&#xFF1A; frame2.T</li>
+</ul>
+<h1 id="&#x4E09;&#x3001;index-reindex-and-hierarchical-indexing">&#x4E09;&#x3001;Index, reindex and hierarchical indexing</h1>
+<h2 id="index-objects">index objects</h2>
+<ul>
+<li><p>index&#x7684;&#x503C;&#x662F;&#x4E0D;&#x80FD;&#x88AB;&#x66F4;&#x6539;&#x7684;</p>
+</li>
+<li><p>&#x9488;&#x5BF9;index&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x548C;&#x5207;&#x7247;</p>
+<p>obj = pd.Series(np.arange(4), index=[&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;])</p>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x5B57;index&#x4F9D;&#x65E7;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</p>
+</li>
+<li><p>&#x5982;&#x4F55;&#x5BF9;Series&#x8FDB;&#x884C;&#x5207;&#x7247;</p>
+</li>
+<li><p>&#x5BF9;DataFrame&#x8FDB;&#x884C;Indexing&#x4E0E;Series&#x57FA;&#x672C;&#x76F8;&#x540C;</p>
+<pre><code>frame = pd.DataFrame(np.arange(9).reshape(3,3),
+index = [&apos;a&apos;, &apos;c&apos;, &apos;d&apos;],
+columns = [&apos;Hangzhou&apos;, &apos;Shezhen&apos;, &apos;Nanjing&apos;])
+</code></pre></li>
+<li><p><a href="http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.reindex.html" target="_blank">reindexs</a></p>
+<p>&#x628A;&#x4E00;&#x4E2A;Series&#x6216;&#x8005;DataFrame&#x6309;&#x7167;&#x65B0;&#x7684;index&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x91CD;&#x6392;</p>
+<pre><code>obj = pd.Series([4.5, 7.2, -5.3, 3.2], index=[&apos;d&apos;, &apos;b&apos;, &apos;a&apos;, &apos;c&apos;])
+obj.reindex([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;])
+obj.reindex([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;], fill_value = 0)
+</code></pre><p>&#x200B;</p>
+</li>
+<li><p>&#x5728;reindex&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x6307;&#x5B9A;columns</p>
+<pre><code class="lang-Python">frame.reindex(columns = [<span class="hljs-string">&apos;Shenzhen&apos;</span>, <span class="hljs-string">&apos;Hangzhou&apos;</span>, <span class="hljs-string">&apos;Chongqing&apos;</span>])
+</code></pre>
+<p>&#x200B;</p>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x7528;drop&#x6765;&#x5220;&#x9664;Series&#x548C;DataFrame&#x4E2D;&#x7684;index</p>
+<p>obj3.drop(2)</p>
+<p>obj3.drop([2, 4])</p>
+</li>
+</ul>
+<ul>
+<li><p>unstack&#x548C;stack&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5728;hierarchical indexing&#x548C;DataFrame&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x3002;</p>
+<p>data.unstack()</p>
+<p>&#x200B;</p>
+</li>
+</ul>
+<h1 id="&#x56DB;&#x3001;merge-join-concatenate-groupby-and-aggregate">&#x56DB;&#x3001;Merge, Join, Concatenate, Groupby and Aggregate</h1>
+<h2 id="mergejoin">Merge(join)</h2>
+<p>pd.merge(df1, df4, on=&apos;cities&apos;)</p>
+<ul>
+<li><p>join on index</p>
+<p>df1.join(df4)</p>
+<p>df1.join(df4, how=&apos;outer&apos;)</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x7528;merge&#x6765;&#x5199;&#xFF1A;pd.merge(df1, df4, left_index=True, right_index=True, how=&apos;outer&apos;)</p>
+</li>
+</ul>
+<h2 id="concatenate">concatenate</h2>
+<p>&#x5728;concatenate&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;keys&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;Key&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x7684;&#x4F8B;&#x5B50;&#x5C31;&#x6784;&#x9020;&#x4E86;&#x4E00;&#x4E2A;hierarchical index&#x3002;&#x76F8;&#x5F53;&#x4E8E;&#x518D;&#x52A0;&#x4E00;&#x7EA7;index</p>
+<pre><code class="lang-python">result2 = pd.concat(frames, keys=[<span class="hljs-string">&apos;x&apos;</span>, <span class="hljs-string">&apos;y&apos;</span>, <span class="hljs-string">&apos;z&apos;</span>])
+</code></pre>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1g04u1hrr0jj30gy07c74l.jpg" alt=""></p>
+<ul>
+<li><p>&#x7528;inner&#x53EF;&#x4EE5;&#x53BB;&#x6389;NaN</p>
+<pre><code class="lang-python">result3 = pd.concat([result, df4], axis=<span class="hljs-number">1</span>, join=<span class="hljs-string">&apos;inner&apos;</span>)
+</code></pre>
+<p>&#x200B;</p>
+</li>
+<li><p>&#x7528;append&#x6765;&#x505A;concatenation</p>
+<p>df1.append(df4)</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;append&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;row</p>
+<pre><code class="lang-python">s2 = pd.Series([<span class="hljs-number">18000</span>, <span class="hljs-number">120000</span>], index=[<span class="hljs-string">&apos;apts&apos;</span>, <span class="hljs-string">&apos;cars&apos;</span>], name=<span class="hljs-string">&apos;Xiamen&apos;</span>
+df1.append(s2)
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>Series&#x548C;DataFrame&#x8FD8;&#x53EF;&#x4EE5;&#x88AB;&#x4E00;&#x8D77;concatenate&#xFF0C;&#x8FD9;&#x65F6;&#x5019;Series&#x4F1A;&#x5148;&#x88AB;&#x8F6C;&#x6210;DataFrame&#x7136;&#x540E;&#x505A;Join&#xFF0C;&#x56E0;&#x4E3A;Series&#x672C;&#x6765;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53EA;&#x6709;&#x4E00;&#x7EF4;&#x7684;DataFrame&#x5BF9;&#x5427;&#x3002;</li>
+</ul>
+<h2 id="group-by">Group By</h2>
+<p>groupby&#x7ECF;&#x5E38;&#x548C;aggregate&#x4E00;&#x8D77;&#x4F7F;&#x7528;</p>
+<h2 id="describe">describe</h2>
+<p>describe&#x8FD9;&#x4E2A;function&#x53EF;&#x4EE5;&#x4E3A;&#x6211;&#x4EEC;&#x5C55;&#x793A;&#x5404;&#x79CD;&#x6709;&#x7528;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>bikes.dropna()  &#x5220;&#x9664;&#x7A7A;&#x503C;</p>
+<p>dropna&#x4F1A;&#x5220;&#x9664;&#x6240;&#x6709;&#x5E26;NA&#x7684;&#x884C;</p>
+<h1 id="&#x4E94;&#x3001;read-from-csv">&#x4E94;&#x3001;Read from csv</h1>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html" target="_blank">&#x8BFB;&#x53D6;csv&#x6587;&#x4EF6;</a></p>
+<h1 id="&#x516D;&#x3001;&#x968F;&#x5802;&#x6848;&#x4F8B;&#xFF1A;bikes-routes-counts">&#x516D;&#x3001;&#x968F;&#x5802;&#x6848;&#x4F8B;&#xFF1A;bikes routes counts</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="数据分析总结-numpy.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 数据分析总结-numpy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据分析总结-pandas","level":"2.5.1","depth":2,"next":{"title":"数据分析总结-numpy","level":"2.5.2","depth":2,"path":"数据分析/数据分析总结-numpy.md","ref":"数据分析/数据分析总结-numpy.md","articles":[]},"previous":{"title":"数据分析","level":"2.5","depth":1,"ref":"","articles":[{"title":"数据分析总结-pandas","level":"2.5.1","depth":2,"path":"数据分析/数据分析总结-pandas.md","ref":"数据分析/数据分析总结-pandas.md","articles":[]},{"title":"数据分析总结-numpy","level":"2.5.2","depth":2,"path":"数据分析/数据分析总结-numpy.md","ref":"数据分析/数据分析总结-numpy.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据分析/数据分析总结-pandas.md","mtime":"2019-02-13T08:07:26.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

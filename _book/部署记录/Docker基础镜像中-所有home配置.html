@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Mac环境配置 · GitBook</title>
+        <title>6.Docker基础镜像中-所有home配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="python环境变量.html" />
+    <link rel="next" href="linux安装python3.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="docker-yaosong5仓库dockerImages汇总.html" />
     
 
     </head>
@@ -122,9 +122,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" data-path="../Mac环境配置/">
             
-                <a href="./">
+                <a href="../Mac环境配置/">
             
                     
                     Mac环境配置
@@ -136,9 +136,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="python环境变量.html">
+        <li class="chapter " data-level="2.2.1" data-path="../Mac环境配置/python环境变量.html">
             
-                <a href="python环境变量.html">
+                <a href="../Mac环境配置/python环境变量.html">
             
                     
                     1.python配置
@@ -168,9 +168,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../部署记录/blog文档md模板.html">
+        <li class="chapter " data-level="2.3.1" data-path="blog文档md模板.html">
             
-                <a href="../部署记录/blog文档md模板.html">
+                <a href="blog文档md模板.html">
             
                     
                     1.blog文档md模板
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../部署记录/Compose-bigdatabase-单组件启动.html">
+        <li class="chapter " data-level="2.3.2" data-path="Compose-bigdatabase-单组件启动.html">
             
-                <a href="../部署记录/Compose-bigdatabase-单组件启动.html">
+                <a href="Compose-bigdatabase-单组件启动.html">
             
                     
                     2.Compose-bigdatabase-单组件启动(docker)
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="../部署记录/Compose-Spark组件-单独启动.html">
+        <li class="chapter " data-level="2.3.3" data-path="Compose-Spark组件-单独启动.html">
             
-                <a href="../部署记录/Compose-Spark组件-单独启动.html">
+                <a href="Compose-Spark组件-单独启动.html">
             
                     
                     3.Compose-Spark组件-单独启动(docker)
@@ -207,9 +207,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.4" data-path="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+        <li class="chapter " data-level="2.3.4" data-path="Docker-通过dockerfile构建镜像需测试.html">
             
-                <a href="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+                <a href="Docker-通过dockerfile构建镜像需测试.html">
             
                     
                     4.Docker-通过dockerfile构建镜像(需测试)
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.5" data-path="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+        <li class="chapter " data-level="2.3.5" data-path="docker-yaosong5仓库dockerImages汇总.html">
             
-                <a href="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+                <a href="docker-yaosong5仓库dockerImages汇总.html">
             
                     
                     5.docker-yaosong5仓库dockerImages汇总
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.6" data-path="../部署记录/Docker基础镜像中-所有home配置.html">
+        <li class="chapter active" data-level="2.3.6" data-path="Docker基础镜像中-所有home配置.html">
             
-                <a href="../部署记录/Docker基础镜像中-所有home配置.html">
+                <a href="Docker基础镜像中-所有home配置.html">
             
                     
                     6.Docker基础镜像中-所有home配置
@@ -246,9 +246,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.7" data-path="../部署记录/linux安装python3.html">
+        <li class="chapter " data-level="2.3.7" data-path="linux安装python3.html">
             
-                <a href="../部署记录/linux安装python3.html">
+                <a href="linux安装python3.html">
             
                     
                     7.linux安装python3
@@ -416,7 +416,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Mac环境配置</a>
+        <a href=".." >6.Docker基础镜像中-所有home配置</a>
     </h1>
 </div>
 
@@ -431,7 +431,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E00;&#x7AE0;">&#x7B2C;&#x4E00;&#x7AE0;</h1>
+                                <pre><code class="lang-bash"><span class="hljs-comment">#java</span>
+<span class="hljs-built_in">export</span> JAVA_HOME=/usr/java/jdk
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$JAVA_HOME</span>:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> CLASSPATH=.:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar
+<span class="hljs-comment">#hadoop</span>
+<span class="hljs-built_in">export</span> HADOOP_HOME=/usr/hadoop
+<span class="hljs-built_in">export</span> HADOOP_CONFIG_HOME=<span class="hljs-variable">$HADOOP_HOME</span>/etc/hadoop
+<span class="hljs-built_in">export</span> HADOOP_CONF_DIR=<span class="hljs-variable">$HADOOP_HOME</span>/etc/hadoop
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HADOOP_HOME</span>/bin
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HADOOP_HOME</span>/sbin
+<span class="hljs-comment">#spark</span>
+<span class="hljs-built_in">export</span> SCALA_HOME=/usr/scala/
+<span class="hljs-built_in">export</span> SPARK_DIST_CLASSPATH=$(hadoop classpath)
+SPARK_MASTER_IP=master
+SPARK_LOCAL_DIRS=/usr/spark
+SPARK_DRIVER_MEMORY=1G
+<span class="hljs-built_in">export</span> SPARK_HOME=/usr/spark
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$SPARK_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$SPARK_HOME</span>/sbin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-comment">#hue</span>
+MAVEN_HOME=/usr/maven
+<span class="hljs-built_in">export</span> MAVEN_HOME
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">${PATH}</span>:<span class="hljs-variable">${MAVEN_HOME}</span>/bin
+ANT_HOME=/usr/ant
+PATH=<span class="hljs-variable">$JAVA_HOME</span>/bin:<span class="hljs-variable">$ANT_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> ANT_HOME PATH
+HUE_HOME=/usr/hue4
+<span class="hljs-comment">#zk hbase</span>
+<span class="hljs-built_in">export</span> ZK_HOME=/usr/zk
+<span class="hljs-built_in">export</span> HBASE_HOME=/usr/hbase
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$HBASE_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$ZK_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-comment">#kafka</span>
+<span class="hljs-built_in">export</span> KAFKA_HOME=/usr/kafka
+<span class="hljs-comment">#elk</span>
+<span class="hljs-built_in">export</span> ES_HOME=/usr/es
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$ES_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> KIBANA_HOME=/usr/kibana
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$KIBANA_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> LOGSTASH_HOME=/usr/logstash
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$LOGSTASH_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> NODE_HOME=/usr/node
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$NODE_HOME</span>/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-built_in">export</span> NODE_PATH=<span class="hljs-variable">$NODE_HOME</span>/lib/node_modules
+<span class="hljs-comment">#flink</span>
+<span class="hljs-built_in">export</span> FLINK_HOME=/usr/flink
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$FLINK_HOME</span>/bin
+</code></pre>
 
                                 
                                 </section>
@@ -459,12 +506,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="docker-yaosong5仓库dockerImages汇总.html" class="navigation navigation-prev " aria-label="Previous page: 5.docker-yaosong5仓库dockerImages汇总">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="python环境变量.html" class="navigation navigation-next " aria-label="Next page: 1.python配置">
+                <a href="linux安装python3.html" class="navigation navigation-next " aria-label="Next page: 7.linux安装python3">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -475,7 +522,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mac环境配置","level":"2.2","depth":1,"next":{"title":"1.python配置","level":"2.2.1","depth":2,"path":"Mac环境配置/python环境变量.md","ref":"Mac环境配置/python环境变量.md","articles":[]},"previous":{"title":"前言","level":"2.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Mac环境配置/README.md","mtime":"2019-01-30T10:08:53.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.Docker基础镜像中-所有home配置","level":"2.3.6","depth":2,"next":{"title":"7.linux安装python3","level":"2.3.7","depth":2,"path":"部署记录/linux安装python3.md","ref":"部署记录/linux安装python3.md","articles":[]},"previous":{"title":"5.docker-yaosong5仓库dockerImages汇总","level":"2.3.5","depth":2,"path":"部署记录/docker-yaosong5仓库dockerImages汇总.md","ref":"部署记录/docker-yaosong5仓库dockerImages汇总.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"部署记录/Docker基础镜像中-所有home配置.md","mtime":"2018-08-02T16:12:30.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,0 +1,668 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据分析总结-numpy · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="数据分析总结-pandas.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Initial page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../Mac环境配置/">
+            
+                <a href="../Mac环境配置/">
+            
+                    
+                    Mac环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../Mac环境配置/python环境变量.html">
+            
+                <a href="../Mac环境配置/python环境变量.html">
+            
+                    
+                    1.python配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    部署记录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../部署记录/blog文档md模板.html">
+            
+                <a href="../部署记录/blog文档md模板.html">
+            
+                    
+                    1.blog文档md模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../部署记录/Compose-bigdatabase-单组件启动.html">
+            
+                <a href="../部署记录/Compose-bigdatabase-单组件启动.html">
+            
+                    
+                    2.Compose-bigdatabase-单组件启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../部署记录/Compose-Spark组件-单独启动.html">
+            
+                <a href="../部署记录/Compose-Spark组件-单独启动.html">
+            
+                    
+                    3.Compose-Spark组件-单独启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+            
+                <a href="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+            
+                    
+                    4.Docker-通过dockerfile构建镜像(需测试)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+            
+                <a href="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+            
+                    
+                    5.docker-yaosong5仓库dockerImages汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="../部署记录/Docker基础镜像中-所有home配置.html">
+            
+                <a href="../部署记录/Docker基础镜像中-所有home配置.html">
+            
+                    
+                    6.Docker基础镜像中-所有home配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="../部署记录/linux安装python3.html">
+            
+                <a href="../部署记录/linux安装python3.html">
+            
+                    
+                    7.linux安装python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    实际问题解决
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../实际问题解决/kafka异常.html">
+            
+                <a href="../实际问题解决/kafka异常.html">
+            
+                    
+                    kafka异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                <a href="../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                    
+                    数仓-解决hive处理异常json命令行转义字符的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    数据分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="数据分析总结-pandas.html">
+            
+                <a href="数据分析总结-pandas.html">
+            
+                    
+                    数据分析总结-pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.2" data-path="数据分析总结-numpy.html">
+            
+                <a href="数据分析总结-numpy.html">
+            
+                    
+                    数据分析总结-numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" >
+            
+                <span>
+            
+                    
+                    应用环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../应用环境/Docker环境启动流程.html">
+            
+                <a href="../应用环境/Docker环境启动流程.html">
+            
+                    
+                    Docker环境启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据分析总结-numpy</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/" target="_blank">Numpy&#x6587;&#x6863;</a></p>
+<h1 id="&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;">&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;</h1>
+<h2 id="&#x4F7F;&#x7528;&#x5185;&#x5EFA;&#x51FD;&#x6570;">&#x4F7F;&#x7528;&#x5185;&#x5EFA;&#x51FD;&#x6570;</h2>
+<p><strong>&#x4F7F;&#x7528;&#x5185;&#x5EFA;&#x51FD;&#x6570;-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</strong>
+a = np.zeros((2, 3))</p>
+<p>a = np.ones((2, 5))</p>
+<p><strong>&#x521B;&#x5EFA;&#x5168;&#x662F;8&#x7684;&#x6570;&#x7EC4;</strong>
+a = np.full((2, 3), 8)
+<strong>&#x521B;&#x5EFA;&#x5BF9;&#x89D2;&#x7684;&#x6570;&#x7EC4;,&#x76F8;&#x5F53;&#x4E8E;&#x5BF9;&#x89D2;&#x77E9;&#x9635;</strong>
+print(np.eye(3))
+<strong>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x77E9;&#x9635;,&#x503C;&#x90FD;&#x662F;int</strong>
+a = np.random.randint(2, 7, (2, 3))</p>
+<p>a = np.random.randn(6,3)</p>
+<p><strong>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x5F62;&#x72B6;&#x56FA;&#x5B9A;&#x7684;&#x77E9;&#x9635;&#x6570;&#x7EC4;</strong>
+a = np.random.random((2, 3))
+a = np.empty((2, 3)))</p>
+<h2 id="&#x76F4;&#x63A5;&#x5B9E;&#x4F8B;&#x5316;">&#x76F4;&#x63A5;&#x5B9E;&#x4F8B;&#x5316;</h2>
+<p><strong>&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#xFF0C;&#x8BBE;&#x7F6E;&#x6570;&#x503C;&#x7C7B;&#x578B;</strong>
+a = np.array([1, 2, 4, 5], dtype=float)
+print(a.dtype)
+print(a.shape)</p>
+<h2 id="&#x7C7B;&#x578B;">&#x7C7B;&#x578B;</h2>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html" target="_blank">&#x7C7B;&#x578B;&#x6587;&#x6863;</a></p>
+<p><strong>&#x8F6C;&#x6362;&#x6570;&#x636E;&#x7C7B;&#x578B;</strong>
+a = np.array([1, 2, 4, 5], dtype=float).astype(int)
+print(a.dtype)</p>
+<ol>
+<li>&#x751F;&#x6210;&#x6570;&#x7EC4;&#x65F6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;numpy&#x4F1A;<strong>&#x81EA;&#x52A8;&#x5339;&#x914D;</strong>&#x5408;&#x9002;&#x7684;&#x7C7B;&#x578B;</li>
+<li>&#x4F7F;&#x7528;astype<strong>&#x590D;&#x5236;&#x6570;&#x7EC4;</strong>&#x5E76;&#x8F6C;&#x6362;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li>&#x4F7F;&#x7528;astype&#x5C06;float&#x8F6C;&#x6362;&#x4E3A;int&#x65F6;<strong>&#x5C0F;&#x6570;&#x90E8;&#x5206;&#x88AB;&#x820D;&#x5F03;</strong></li>
+<li>&#x4F7F;&#x7528;astype&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x5982;&#x679C;&#x5931;&#x8D25;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</li>
+<li>astype&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x6570;&#x7EC4;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570; arr1.astype(dtype=arr2.dtype)</li>
+</ol>
+<h1 id="&#x4E8C;&#x3001;&#x53D6;&#x503C;&#x8D4B;&#x503C;">&#x4E8C;&#x3001;&#x53D6;&#x503C;&#x8D4B;&#x503C;</h1>
+<p>a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])</p>
+<h2 id="1&#x5207;&#x7247;&#x53D6;&#x503C;">1.&#x5207;&#x7247;&#x53D6;&#x503C;</h2>
+<p>&#x53EF;&#x4EE5;&#x50CF;list&#x4E00;&#x6837;&#x5207;&#x7247;&#xFF08;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x4ECE;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x540C;&#x65F6;&#x5207;&#x7247;&#xFF09;</p>
+<p>print(a.shape)
+b = a[0:2, 2: 4].copy()
+print(b)
+print(a[:2, 1:])</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;</p>
+<p>a[0,0]=2222</p>
+<p>&#x4E0D;&#x5EFA;&#x8BAE;&#x4F60;&#x8FD9;&#x6837;&#x53BB;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5207;&#x7247;&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5B8C;&#x6210;&#x5BF9;&#x539F;&#x6570;&#x7EC4;&#x7684;&#x8D4B;&#x503C;.</p>
+<p>copy&#x4E5F;&#x76F8;&#x5F53;&#x4E8E;&#x8D4B;&#x503C;</p>
+<h2 id="2&#x6761;&#x4EF6;&#x5224;&#x5B9A;bool&#x53D6;&#x503C;">2.&#x6761;&#x4EF6;&#x5224;&#x5B9A;bool&#x53D6;&#x503C;</h2>
+<p>&#x5F88;&#x597D;&#x7528;</p>
+<p>print(a[a / 2 =0])</p>
+<h2 id="3&#x7CBE;&#x51C6;&#x53D6;&#x503C;">3.&#x7CBE;&#x51C6;&#x53D6;&#x503C;</h2>
+<p>print(&quot;&#x7CBE;&#x51C6;&#x53D6;&#x503C;&quot;)
+print([a[0, 0], a[1, 2], a[2, 2]])</p>
+<p>&#x53D6;&#x503C;&#x7684;&#x6837;&#x56FE;&#xFF1A;</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1g03i8gk0ppj30za0sugrb.jpg" alt=""></p>
+<h1 id="&#x4E09;&#x3001;&#x8FD0;&#x7B97;">&#x4E09;&#x3001;&#x8FD0;&#x7B97;</h1>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/routines.math.html" target="_blank">&#x8BE6;&#x7EC6;&#x8FD0;&#x7B97;&#x6587;&#x6863;</a> &#x6BD4;&#x5982;&#x6BD4;&#x5982;&#x77E9;&#x9635;&#x7684;&#x53D8;&#x5F62;&#xFF0C;&#x8F6C;&#x7F6E;&#x548C;&#x91CD;&#x6392;&#x7B49;&#x7B49;:</p>
+<p>&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;x,y&#x7EF4;&#x5EA6;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;</p>
+<ul>
+<li><p>&#x9010;&#x5143;&#x7D20;&#x6C42;&#x548C;&#xFF0C;&#x5DEE;&#xFF0C;&#x4E58;&#xFF0C;&#x9664;&#xFF1A;x+y&#x3001;np.add(x,y)&#xFF0C;x-y&#x3001;(np.subtract(x,y))&#xFF0C;x*y &#x3001;(np.multiply(x,y))&#xFF0C;x/y &#x3001;(np.divide(x, y))</p>
+</li>
+<li><p>&#x9010;&#x5143;&#x7D20;&#x6C42;&#x5E73;&#x65B9;&#x6839;&#xFF1A;np.squrt(x)</p>
+</li>
+<li><p>&#x6C42;&#x5411;&#x91CF;&#x5185;&#x79EF;&#xFF08;&#x4E5F;&#x662F;&#x77E9;&#x9635;&#x7684;&#x4E58;&#x6CD5;&#xFF09;&#xFF1A;np.dot(v,w)</p>
+</li>
+<li><p>&#x8F6C;&#x7F6E;&#xFF1A;x.T</p>
+</li>
+<li><p>&#x6C42;&#x548C;&#xFF1A;np.sum(x)  np.sum(x,axis=0) &#x6C42;&#x5217;&#x548C;  np.sum(x,axis=1) &#x6C42;&#x6A2A;&#x6392;&#x548C;&#x4E5F;&#x5C31;&#x662F;&#x5404;&#x4E2A;&#x5355;&#x5143;&#x7684;&#x548C;</p>
+</li>
+<li><p>&#x6C42;&#x5E73;&#x5747;&#xFF1A;np.mean(x) &#x540C;&#x4E0A;</p>
+</li>
+<li><p>&#x6BD4;&#x5982;&#x6C42;&#x548C;&#xFF0C;&#x6C42;&#x5E73;&#x5747;&#xFF0C;&#x6C42;cumulative sum&#xFF0C;sumulative product&#x7528;numpy&#x90FD;&#x53EF;&#x4EE5;&#x505A;</p>
+<p>x.cumsum(axis=0)</p>
+<p>x.cumprod(axis=0)</p>
+</li>
+<li><p>&#x6392;&#x5E8F;&#xFF1A;x.sort()</p>
+<ul>
+<li><p>&#x627E;&#x51FA;&#x6392;&#x5E8F;&#x540E;&#x4F4D;&#x7F6E;&#x5728;5%&#x7684;&#x6570;&#x5B57;&#xFF1A; </p>
+<pre><code>large_arr = np.random.randn(1000)
+large_arr.sort()
+print(large_arr[int(0.05 * len(large_arr))])
+</code></pre><p>&#x200B;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="&#x56DB;&#x3001;broadcasting">&#x56DB;&#x3001;Broadcasting</h1>
+<p>&#x5982;&#x679C;&#x8981;&#x7528;&#x5C0F;&#x7684;&#x77E9;&#x9635;&#x53BB;&#x548C;&#x5927;&#x7684;&#x77E9;&#x9635;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x5E0C;&#x671B;&#x5C0F;&#x77E9;&#x9635;&#x80FD;&#x5FAA;&#x73AF;&#x548C;&#x5927;&#x77E9;&#x9635;&#x7684;&#x90A3;&#x4E9B;&#x5757;&#x505A;&#x4E00;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x6025;&#x9700;&#x8981;Broadcasting&#x5566;</p>
+<p>&#x6211;&#x4EEC;&#x8981;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x7ED9;x&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x9010;&#x5143;&#x7D20;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;y</p>
+<p>x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])</p>
+<p>v = np.array([1, 0, 1])</p>
+<p>x + np.reshape(w, (2,1))</p>
+<p>broadcasting&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x9010;&#x5143;&#x7D20;&#x8FD0;&#x7B97;&#x4E86;</p>
+<p>&#x5148;&#x628A;v&#x53D8;&#x5F62;&#x6210;3x1&#x7684;&#x6570;&#x7EC4;/&#x77E9;&#x9635;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;broadcasting&#x52A0;&#x5728;w&#x4E0A;&#x4E86;</p>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;broadcasting&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x56FE;&#xFF1A;</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1g03i8x2hifj30sg0kqju6.jpg" alt=""></p>
+<h1 id="&#x4E94;&#x3001;&#x903B;&#x8F91;&#x8FD0;&#x7B97;where">&#x4E94;&#x3001;&#x903B;&#x8F91;&#x8FD0;&#x7B97;where</h1>
+<p>x_arr = np.array([1.1, 1.2, 1.3, 1.4, 1.5])</p>
+<p>y_arr = np.array([2.1, 2.2, 2.3, 2.4, 2.5])</p>
+<p>cond = np.array([True, False, True, True, False])</p>
+<p>np.where(cond, x_arr, y_arr)</p>
+<p>&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<p>[1.1 2.2 1.3 1.4 2.5]</p>
+<p>&#x5982;&#x679C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x5C31;&#x7B2C;&#x4E00;&#x4E2A;&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x7B2C;&#x4E8C;&#x4E2A;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x53D6;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#x3002;</p>
+<p>np.where(arr &gt; 0, 1,-1)</p>
+<h1 id="&#x516D;&#x3001;&#x9AD8;&#x7EA7;ndarray&#x5904;&#x7406;">&#x516D;&#x3001;&#x9AD8;&#x7EA7;ndarray&#x5904;&#x7406;</h1>
+<ul>
+<li>&#x4F7F;&#x7528;reshape&#x6765;&#x6539;&#x53D8;tensor&#x7684;&#x5F62;&#x72B6;&#xFF0C;numpy&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x628A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4E09;&#x7EF4;&#x6570;&#x7EC4;&#x3002;</li>
+</ul>
+<p>arr.arange(8) &#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x6210;arr.reshape(2,4) &#x4E5F;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x6210;arr.reshape(2,2,2)</p>
+<ul>
+<li>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x67D0;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E0A;&#x5199;&#x4E0A;-1&#xFF0C;numpy&#x4F1A;&#x5E2E;&#x6211;&#x4EEC;&#x81EA;&#x52A8;&#x63A8;&#x5BFC;&#x51FA;&#x6B63;&#x786E;&#x7684;&#x7EF4;&#x5EA6;&#x8FD8;&#x53EF;&#x4EE5;&#x4ECE;&#x5176;&#x4ED6;&#x7684;ndarray&#x4E2D;&#x83B7;&#x53D6;shape&#x4FE1;&#x606F;&#x7136;&#x540E;reshape</li>
+<li>&#x9AD8;&#x7EF4;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x7528;ravel&#x6765;&#x62C9;&#x5E73;&#xFF1A;arr.ravel()</li>
+<li>&#x62FC;&#x63A5;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF1A;</li>
+</ul>
+<p>np.concatenate([arr1, arr2], axis=0)</p>
+<ul>
+<li>&#x6240;&#x8C13;&#x5806;&#x53E0;&#xFF0C;&#x53C2;&#x8003;&#x53E0;&#x76D8;&#x5B50;&#x3002;&#x3002;&#x3002;&#x8FDE;&#x63A5;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x8868;&#x8FF0; &#x5782;&#x76F4;stack&#x4E0E;&#x6C34;&#x5E73;stack</li>
+</ul>
+<p>np.vstack((arr1, arr2)) # vertical</p>
+<p>np.hstack((arr1, arr2)) # horizontal</p>
+<ul>
+<li><p>&#x5806;&#x53E0;&#x8F85;&#x52A9;</p>
+<p>arr = np.arange(6)</p>
+<p>arr1 = arr.reshape((3, 2))</p>
+<p>arr2 = np.random.randn(3, 2)</p>
+<ul>
+<li>r_&#x7528;&#x4E8E;&#x6309;&#x884C;&#x5806;&#x53E0;</li>
+<li>c_&#x7528;&#x4E8E;&#x6309;&#x5217;&#x5806;&#x53E0;</li>
+</ul>
+</li>
+</ul>
+<pre><code>np.r_[arr1, arr2]
+np.c_[np.r_[arr1, arr2], arr]
+</code></pre><ul>
+<li><p>&#x62C6;&#x5206;&#x6570;&#x7EC4;</p>
+<p>first, second, third = np.split(arr, [1,3], axis=0)</p>
+<ul>
+<li>axis = 0&#xFF1A;&#x8868;&#x793A;&#x524D;&#x9762;&#x662F;&#x884C;&#x6570;</li>
+</ul>
+</li>
+<li><p>&#x91CD;&#x590D;repeat &#xFF08;<a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tile.html" target="_blank">&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</a>&#xFF09;</p>
+<ul>
+<li><p>&#x6309;&#x5143;&#x7D20;&#x91CD;&#x590D;</p>
+</li>
+<li><p>&#x6307;&#x5B9A;axis&#x6765;&#x91CD;&#x590D;</p>
+<p>arr.repeat(2, axis=1)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x8F93;&#x51FA;">&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x8F93;&#x51FA;</h1>
+<ul>
+<li>&#x8BFB;&#x53D6;csv&#x6587;&#x4EF6;&#xFF1A;arr = np.loadtxt(&apos;array_ex.txt&apos;, delimiter=&apos;,&apos;)</li>
+<li>&#x4FDD;&#x5B58;&#x6570;&#x7EC4;&#x6587;&#x4EF6;&#xFF1A;np.save(&apos;some_array&apos;, arr)</li>
+</ul>
+<h1 id="&#x5199;&#x4E00;&#x4E2A;softmax">&#x5199;&#x4E00;&#x4E2A;softmax</h1>
+<p><a href="http://cs231n.github.io/linear-classify/#softmax" target="_blank">softmax&#x89E3;&#x6790;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="数据分析总结-pandas.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数据分析总结-pandas">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据分析总结-numpy","level":"2.5.2","depth":2,"next":{"title":"应用环境","level":"2.6","depth":1,"ref":"","articles":[{"title":"Docker环境启动流程","level":"2.6.1","depth":2,"path":"应用环境/Docker环境启动流程.md","ref":"应用环境/Docker环境启动流程.md","articles":[]}]},"previous":{"title":"数据分析总结-pandas","level":"2.5.1","depth":2,"path":"数据分析/数据分析总结-pandas.md","ref":"数据分析/数据分析总结-pandas.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据分析/数据分析总结-numpy.md","mtime":"2019-02-12T09:33:34.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Mac环境配置 · GitBook</title>
+        <title>4.Docker-通过dockerfile构建镜像(需测试) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="python环境变量.html" />
+    <link rel="next" href="docker-yaosong5仓库dockerImages汇总.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="Compose-Spark组件-单独启动.html" />
     
 
     </head>
@@ -122,9 +122,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="./">
+        <li class="chapter " data-level="2.2" data-path="../Mac环境配置/">
             
-                <a href="./">
+                <a href="../Mac环境配置/">
             
                     
                     Mac环境配置
@@ -136,9 +136,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.2.1" data-path="python环境变量.html">
+        <li class="chapter " data-level="2.2.1" data-path="../Mac环境配置/python环境变量.html">
             
-                <a href="python环境变量.html">
+                <a href="../Mac环境配置/python环境变量.html">
             
                     
                     1.python配置
@@ -168,9 +168,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.3.1" data-path="../部署记录/blog文档md模板.html">
+        <li class="chapter " data-level="2.3.1" data-path="blog文档md模板.html">
             
-                <a href="../部署记录/blog文档md模板.html">
+                <a href="blog文档md模板.html">
             
                     
                     1.blog文档md模板
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.2" data-path="../部署记录/Compose-bigdatabase-单组件启动.html">
+        <li class="chapter " data-level="2.3.2" data-path="Compose-bigdatabase-单组件启动.html">
             
-                <a href="../部署记录/Compose-bigdatabase-单组件启动.html">
+                <a href="Compose-bigdatabase-单组件启动.html">
             
                     
                     2.Compose-bigdatabase-单组件启动(docker)
@@ -194,9 +194,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.3" data-path="../部署记录/Compose-Spark组件-单独启动.html">
+        <li class="chapter " data-level="2.3.3" data-path="Compose-Spark组件-单独启动.html">
             
-                <a href="../部署记录/Compose-Spark组件-单独启动.html">
+                <a href="Compose-Spark组件-单独启动.html">
             
                     
                     3.Compose-Spark组件-单独启动(docker)
@@ -207,9 +207,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.4" data-path="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+        <li class="chapter active" data-level="2.3.4" data-path="Docker-通过dockerfile构建镜像需测试.html">
             
-                <a href="../部署记录/Docker-通过dockerfile构建镜像需测试.html">
+                <a href="Docker-通过dockerfile构建镜像需测试.html">
             
                     
                     4.Docker-通过dockerfile构建镜像(需测试)
@@ -220,9 +220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.5" data-path="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+        <li class="chapter " data-level="2.3.5" data-path="docker-yaosong5仓库dockerImages汇总.html">
             
-                <a href="../部署记录/docker-yaosong5仓库dockerImages汇总.html">
+                <a href="docker-yaosong5仓库dockerImages汇总.html">
             
                     
                     5.docker-yaosong5仓库dockerImages汇总
@@ -233,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.6" data-path="../部署记录/Docker基础镜像中-所有home配置.html">
+        <li class="chapter " data-level="2.3.6" data-path="Docker基础镜像中-所有home配置.html">
             
-                <a href="../部署记录/Docker基础镜像中-所有home配置.html">
+                <a href="Docker基础镜像中-所有home配置.html">
             
                     
                     6.Docker基础镜像中-所有home配置
@@ -246,9 +246,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3.7" data-path="../部署记录/linux安装python3.html">
+        <li class="chapter " data-level="2.3.7" data-path="linux安装python3.html">
             
-                <a href="../部署记录/linux安装python3.html">
+                <a href="linux安装python3.html">
             
                     
                     7.linux安装python3
@@ -416,7 +416,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Mac环境配置</a>
+        <a href=".." >4.Docker-通过dockerfile构建镜像(需测试)</a>
     </h1>
 </div>
 
@@ -431,7 +431,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E00;&#x7AE0;">&#x7B2C;&#x4E00;&#x7AE0;</h1>
+                                <pre><code class="lang-dockerfile"><span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x57FA;&#x672C;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x540E;&#x7EED;&#x547D;&#x4EE4;&#x90FD;&#x4EE5;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;&#x4E3A;&#x57FA;&#x7840;</span>
+
+<span class="hljs-keyword">FROM</span> kinogmt/centos-ssh:<span class="hljs-number">6.7</span>
+
+<span class="hljs-comment"># &#x4F5C;&#x8005;&#x4FE1;&#x606F;</span>
+
+<span class="hljs-keyword">MAINTAINER</span> yaosong, http://yaosong5@qq.com
+
+<span class="hljs-comment"># RUN&#x547D;&#x4EE4;&#x4F1A;&#x5728;&#x4E0A;&#x9762;&#x6307;&#x5B9A;&#x7684;&#x955C;&#x50CF;&#x91CC;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;</span>
+
+<span class="hljs-keyword">RUN</span> <span class="bash">yum install passwd openssl openssh-server -y \
+
+</span>&#x200B;
+</code></pre>
+<pre><code>&amp;&amp; echo &apos;123456&apos; | passwd --stdin root \
+&amp;&amp; touch /etc/ssh/ssh_host_rsa_key \
+&amp;&amp; touch /etc/ssh/ssh_host_ecdsa_key \
+&amp;&amp;  chmod 600 /etc/ssh/ssh_host_rsa_key  \
+&amp;&amp;  chmod 600 /etc/ssh/ssh_host_dsa_key  \
+&amp;&amp;  chown root /etc/ssh/ssh_host_rsa_key  \
+&amp;&amp;  chown root /etc/ssh/ssh_host_dsa_key  \
+&amp;&amp; mkdir -p /root/.ssh  \
+&amp;&amp; mkdir /var/run/sshd  \
+&amp;&amp; touch /root/.ssh/config  \
+&amp;&amp; echo &quot;StrictHostKeyChecking no&quot; &gt; /root/.ssh/config  \
+&amp;&amp; sed -i &quot;a UserKnownHostsFile /dev/null&quot; /root/.ssh/config \
+&amp;&amp; ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -y \
+&amp;&amp; ssh-keygen -t dsa -f /etc/ssh/ssh_host_rsa_key -y \
+&amp;&amp; sed -i &apos;s/UsePAM yes/UsePAM no/g&apos; /etc/ssh/sshd_config  \
+&amp;&amp; yum  install vim -y \
+&amp;&amp; yum install -y openssh-server  \
+&amp;&amp; sed -i &quot;s/#Port 22/Port 22/g&quot; /etc/ssh/sshd_config    \
+&amp;&amp; sed -i &quot;s/#ListenAddress0.0.0.0/ListenAddress 0.0.0.0/g&quot; /etc/ssh/sshd_config    \
+&amp;&amp; sed -i &quot;s/#ListenAddress::/ListenAddress ::/g&quot; /etc/ssh/sshd_config    \
+&amp;&amp; sed -i &quot;s/#PermitRootLoginyes/PermitRootLogin yes/g&quot; /etc/ssh/sshd_config    \
+&amp;&amp; sed -i &quot;s/#PasswordAuthenticationyes/PasswordAuthentication yes/g&quot; /etc/ssh/sshd_config    \
+&amp;&amp; sed -i &quot;s/#PermitEmptyPasswordsno/PermitEmptyPasswords yes/g&quot; /etc/ssh/sshd_config   \
+&amp;&amp; mkdir -p /root/.ssh &amp;&amp; chown root.root /root &amp;&amp; chmod 700 /root/.ssh
+</code></pre><p>&#x200B;```</p>
+<p>EXPOSE 22</p>
+<h1 id="&#x542F;&#x52A8;sshd&#x670D;&#x52A1;&#x5E76;&#x4E14;&#x66B4;&#x9732;22&#x7AEF;&#x53E3;">&#x542F;&#x52A8;sshd&#x670D;&#x52A1;&#x5E76;&#x4E14;&#x66B4;&#x9732;22&#x7AEF;&#x53E3;</h1>
+<p>CMD [&quot;/usr/sbin/sshd&quot;, &quot;-D&quot;] </p>
+<h1 id="&#x66B4;&#x9732;ssh&#x7AEF;&#x53E3;22">&#x66B4;&#x9732;ssh&#x7AEF;&#x53E3;22</h1>
+<p>EXPOSE 22</p>
+<h1 id="&#x8BBE;&#x5B9A;&#x8FD0;&#x884C;&#x955C;&#x50CF;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x547D;&#x4EE4;&#xFF1A;&#x8F93;&#x51FA;ip&#xFF0C;&#x5E76;&#x4EE5;daemon&#x65B9;&#x5F0F;&#x542F;&#x52A8;sshd">&#x8BBE;&#x5B9A;&#x8FD0;&#x884C;&#x955C;&#x50CF;&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x547D;&#x4EE4;&#xFF1A;&#x8F93;&#x51FA;ip&#xFF0C;&#x5E76;&#x4EE5;daemon&#x65B9;&#x5F0F;&#x542F;&#x52A8;sshd</h1>
+<h1 id="cmd-ip-addr-ls-eth0--awk-print-2--egrep--o-0-930-9usrsbinsshd--d">CMD ip addr ls eth0 | awk &apos;{print $2}&apos; | egrep -o &apos;([0-9]+.){3}[0-9]+&apos;;/usr/sbin/sshd -D</h1>
+<p>CMD [&quot;/usr/sbin/sshd&quot;, &quot;-D&quot;]</p>
+<p>```</p>
+<h1 id="&#x6784;&#x9020;&#x955C;&#x50CF;">&#x6784;&#x9020;&#x955C;&#x50CF;</h1>
+<p>docker build -f Dockerfile -t hadoop:v1 .</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;Dockerfile&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>docker build -t centos:tt - &lt; Dockerfile</p>
 
                                 
                                 </section>
@@ -459,12 +510,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="Compose-Spark组件-单独启动.html" class="navigation navigation-prev " aria-label="Previous page: 3.Compose-Spark组件-单独启动(docker)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="python环境变量.html" class="navigation navigation-next " aria-label="Next page: 1.python配置">
+                <a href="docker-yaosong5仓库dockerImages汇总.html" class="navigation navigation-next " aria-label="Next page: 5.docker-yaosong5仓库dockerImages汇总">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -475,7 +526,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mac环境配置","level":"2.2","depth":1,"next":{"title":"1.python配置","level":"2.2.1","depth":2,"path":"Mac环境配置/python环境变量.md","ref":"Mac环境配置/python环境变量.md","articles":[]},"previous":{"title":"前言","level":"2.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Mac环境配置/README.md","mtime":"2019-01-30T10:08:53.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.Docker-通过dockerfile构建镜像(需测试)","level":"2.3.4","depth":2,"next":{"title":"5.docker-yaosong5仓库dockerImages汇总","level":"2.3.5","depth":2,"path":"部署记录/docker-yaosong5仓库dockerImages汇总.md","ref":"部署记录/docker-yaosong5仓库dockerImages汇总.md","articles":[]},"previous":{"title":"3.Compose-Spark组件-单独启动(docker)","level":"2.3.3","depth":2,"path":"部署记录/Compose-Spark组件-单独启动.md","ref":"部署记录/Compose-Spark组件-单独启动.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"部署记录/Docker-通过dockerfile构建镜像需测试.md","mtime":"2019-03-06T03:46:59.567Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T06:21:33.731Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
