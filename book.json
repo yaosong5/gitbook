@@ -1,0 +1,14 @@
+{
+    "title": "GitBook 使用教程",
+    "description": "记录 GitBook 的配置和一些插件的使用",
+    "author": "zhangjikai",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "Home": "http://www.zhangjikai.com"
+        }
+    }
+}
