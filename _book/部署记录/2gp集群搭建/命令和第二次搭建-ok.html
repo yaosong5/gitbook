@@ -1,0 +1,697 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>命令和第二次搭建-ok · GitBook 使用教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gp搭建遇到的错误.html" />
+    
+    
+    <link rel="prev" href="tt.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Mac环境配置/">
+            
+                <a href="../../Mac环境配置/">
+            
+                    
+                    Mac环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../Mac环境配置/python环境变量.html">
+            
+                <a href="../../Mac环境配置/python环境变量.html">
+            
+                    
+                    1.python配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    部署安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../blog文档md模板.html">
+            
+                <a href="../blog文档md模板.html">
+            
+                    
+                    博客blog文档md模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux安装python3.html">
+            
+                <a href="../linux安装python3.html">
+            
+                    
+                    linux安装python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Docker部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../1Docker部署/Compose-bigdatabase-单组件启动.html">
+            
+                <a href="../1Docker部署/Compose-bigdatabase-单组件启动.html">
+            
+                    
+                    Compose-bigdatabase-单组件启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../1Docker部署/Compose-Spark组件-单独启动.html">
+            
+                <a href="../1Docker部署/Compose-Spark组件-单独启动.html">
+            
+                    
+                    Compose-Spark组件-单独启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../1Docker部署/Docker-通过dockerfile构建镜像需测试.html">
+            
+                <a href="../1Docker部署/Docker-通过dockerfile构建镜像需测试.html">
+            
+                    
+                    Docker-通过dockerfile构建镜像(需测试)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../1Docker部署/docker-yaosong5仓库dockerImages汇总.html">
+            
+                <a href="../1Docker部署/docker-yaosong5仓库dockerImages汇总.html">
+            
+                    
+                    docker-yaosong5仓库dockerImages汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../1Docker部署/Docker基础镜像中-所有home配置.html">
+            
+                <a href="../1Docker部署/Docker基础镜像中-所有home配置.html">
+            
+                    
+                    Docker基础镜像中-所有home配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    gp部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="tt.html">
+            
+                <a href="tt.html">
+            
+                    
+                    tt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.2" data-path="命令和第二次搭建-ok.html">
+            
+                <a href="命令和第二次搭建-ok.html">
+            
+                    
+                    命令和第二次搭建-ok
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="gp搭建遇到的错误.html">
+            
+                <a href="gp搭建遇到的错误.html">
+            
+                    
+                    gp搭建遇到的错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="gp集群搭建①-下载greenplum.html">
+            
+                <a href="gp集群搭建①-下载greenplum.html">
+            
+                    
+                    gp集群搭建①-下载greenplum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="gp集群搭建②-新建用户免密登录.html">
+            
+                <a href="gp集群搭建②-新建用户免密登录.html">
+            
+                    
+                    gp集群搭建②-新建用户免密登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="gp集群搭建③-greenplum系统搭建.html">
+            
+                <a href="gp集群搭建③-greenplum系统搭建.html">
+            
+                    
+                    gp集群搭建③-greenplum系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    实际问题解决
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../实际问题解决/kafka异常.html">
+            
+                <a href="../../实际问题解决/kafka异常.html">
+            
+                    
+                    kafka异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                <a href="../../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                    
+                    数仓-解决hive处理异常json命令行转义字符的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../数据分析/数据分析总结-pandas.html">
+            
+                <a href="../../数据分析/数据分析总结-pandas.html">
+            
+                    
+                    数据分析总结-pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据分析/数据分析总结-numpy.html">
+            
+                <a href="../../数据分析/数据分析总结-numpy.html">
+            
+                    
+                    数据分析总结-numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    应用环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../应用环境/Docker环境启动流程.html">
+            
+                <a href="../../应用环境/Docker环境启动流程.html">
+            
+                    
+                    Docker环境启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >命令和第二次搭建-ok</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5220;&#x9664;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;</p>
+<p>gpssh -f /home/gp/conf/hostlist</p>
+<p>gpinitsystem -c /home/gp/conf/gpinitsystem_config -h /home/gp/conf/seg_hosts -s gpstandby</p>
+<pre><code class="lang-bash">gpssh <span class="hljs-_">-f</span> /home/gp/conf/hostlist
+<span class="hljs-built_in">cd</span> /data/
+rm -rf master/*
+rm -rf mirror/*
+rm -rf primary/*
+<span class="hljs-built_in">exit</span>
+</code></pre>
+<h1 id="&#x7CFB;&#x7EDF;&#x53C2;&#x6570;">&#x7CFB;&#x7EDF;&#x53C2;&#x6570;</h1>
+<p>&#x4E00;&#x6837;&#x7684;</p>
+<p>vim /etc/sysctl.conf</p>
+<pre><code>kernel.shmmax = 500000000
+kernel.shmmni = 4096
+kernel.shmall = 4000000000
+kernel.sem = 250 512000 100 2048
+kernel.sysrq = 1
+kernel.core_uses_pid = 1
+kernel.msgmnb = 65536
+kernel.msgmax = 65536
+kernel.msgmni = 2048
+net.ipv4.tcp_syncookies = 1
+net.ipv4.ip_forward = 0
+net.ipv4.conf.default.accept_source_route = 0
+net.ipv4.tcp_tw_recycle = 1
+net.ipv4.tcp_max_syn_backlog = 4096
+net.ipv4.conf.all.arp_filter = 1
+net.ipv4.ip_local_port_range = 1025 65535
+net.core.netdev_max_backlog = 10000
+net.core.rmem_max = 2097152
+net.core.wmem_max = 2097152
+vm.overcommit_memory = 2
+</code></pre><p>sysctl -p</p>
+<p>&#x4E00;&#x6837;&#x7684;</p>
+<pre><code>vim /etc/security/limits.conf
+# End of file
+* soft nofile 65536
+* hard nofile 65536
+* soft nproc 131072
+* hard nproc 131072
+</code></pre><pre><code>gpssh -f /home/gp/conf/hostlist
+</code></pre><pre><code>ARRAY_NAME=&quot;Greenplum&quot;
+SEG_PREFIX=gpseg
+PORT_BASE=40000
+declare -a DATA_DIRECTORY=(/data/primary)
+MASTER_HOSTNAME=gpmaster
+MASTER_DIRECTORY=/data/master
+MASTER_PORT=5432
+TRUSTED_SHELL=/usr/bin/ssh
+MIRROR_PORT_BASE=50000
+REPLICATION_PORT_BASE=41000
+MIRROR_REPLICATION_PORT_BASE=44000
+declare -a MIRROR_DATA_DIRECTORY=(/data/mirror)
+MACHINE_LIST_FILE=/home/gp/conf/seg_hosts
+
+
+
+
+
+
+ARRAY_NAME=&quot;Greenplum&quot;
+SEG_PREFIX=gpseg
+PORT_BASE=40000
+declare -a DATA_DIRECTORY=(/data/primary /data/primary /data/primary)
+MASTER_HOSTNAME=gpmaster
+MASTER_DIRECTORY=/data/master
+MASTER_PORT=5432
+TRUSTED_SHELL=ssh
+MIRROR_PORT_BASE=50000
+REPLICATION_PORT_BASE=41000
+MIRROR_REPLICATION_PORT_BASE=44000
+declare -a MIRROR_DATA_DIRECTORY=(/data/mirror /data/mirror /data/mirror)
+MACHINE_LIST_FILE=/home/gp/conf/seg_hosts
+DATABASE_NAME=gp_sydb
+MASTER_DATA_DIRECTORY=/data/master/gpseg-1
+
+&#x8BBE;&#x7F6E;&#x4E86;&#x4F1A;&#x62A5;&#x9519;&#xFF1F;
+CHECK_POINT_SEGMENTS=8
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="tt.html" class="navigation navigation-prev " aria-label="Previous page: tt">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gp搭建遇到的错误.html" class="navigation navigation-next " aria-label="Next page: gp搭建遇到的错误">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"命令和第二次搭建-ok","level":"1.3.4.2","depth":3,"next":{"title":"gp搭建遇到的错误","level":"1.3.4.3","depth":3,"path":"部署记录/2gp集群搭建/gp搭建遇到的错误.md","ref":"部署记录/2gp集群搭建/gp搭建遇到的错误.md","articles":[]},"previous":{"title":"tt","level":"1.3.4.1","depth":3,"path":"部署记录/2gp集群搭建/tt.md","ref":"部署记录/2gp集群搭建/tt.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://www.zhangjikai.com"}},"gitbook":"3.2.3","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"部署记录/2gp集群搭建/命令和第二次搭建-ok.md","mtime":"2019-03-22T04:01:17.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T03:53:24.258Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

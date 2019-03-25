@@ -1,0 +1,673 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>gp集群搭建②-新建用户免密登录 · GitBook 使用教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gp集群搭建③-greenplum系统搭建.html" />
+    
+    
+    <link rel="prev" href="gp集群搭建①-下载greenplum.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Mac环境配置/">
+            
+                <a href="../../Mac环境配置/">
+            
+                    
+                    Mac环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../Mac环境配置/python环境变量.html">
+            
+                <a href="../../Mac环境配置/python环境变量.html">
+            
+                    
+                    1.python配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    部署安装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../blog文档md模板.html">
+            
+                <a href="../blog文档md模板.html">
+            
+                    
+                    博客blog文档md模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../linux安装python3.html">
+            
+                <a href="../linux安装python3.html">
+            
+                    
+                    linux安装python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Docker部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../1Docker部署/Compose-bigdatabase-单组件启动.html">
+            
+                <a href="../1Docker部署/Compose-bigdatabase-单组件启动.html">
+            
+                    
+                    Compose-bigdatabase-单组件启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../1Docker部署/Compose-Spark组件-单独启动.html">
+            
+                <a href="../1Docker部署/Compose-Spark组件-单独启动.html">
+            
+                    
+                    Compose-Spark组件-单独启动(docker)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../1Docker部署/Docker-通过dockerfile构建镜像需测试.html">
+            
+                <a href="../1Docker部署/Docker-通过dockerfile构建镜像需测试.html">
+            
+                    
+                    Docker-通过dockerfile构建镜像(需测试)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../1Docker部署/docker-yaosong5仓库dockerImages汇总.html">
+            
+                <a href="../1Docker部署/docker-yaosong5仓库dockerImages汇总.html">
+            
+                    
+                    docker-yaosong5仓库dockerImages汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../1Docker部署/Docker基础镜像中-所有home配置.html">
+            
+                <a href="../1Docker部署/Docker基础镜像中-所有home配置.html">
+            
+                    
+                    Docker基础镜像中-所有home配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    gp部署
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="tt.html">
+            
+                <a href="tt.html">
+            
+                    
+                    tt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="命令和第二次搭建-ok.html">
+            
+                <a href="命令和第二次搭建-ok.html">
+            
+                    
+                    命令和第二次搭建-ok
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="gp搭建遇到的错误.html">
+            
+                <a href="gp搭建遇到的错误.html">
+            
+                    
+                    gp搭建遇到的错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="gp集群搭建①-下载greenplum.html">
+            
+                <a href="gp集群搭建①-下载greenplum.html">
+            
+                    
+                    gp集群搭建①-下载greenplum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.5" data-path="gp集群搭建②-新建用户免密登录.html">
+            
+                <a href="gp集群搭建②-新建用户免密登录.html">
+            
+                    
+                    gp集群搭建②-新建用户免密登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="gp集群搭建③-greenplum系统搭建.html">
+            
+                <a href="gp集群搭建③-greenplum系统搭建.html">
+            
+                    
+                    gp集群搭建③-greenplum系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    实际问题解决
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../实际问题解决/kafka异常.html">
+            
+                <a href="../../实际问题解决/kafka异常.html">
+            
+                    
+                    kafka异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                <a href="../../实际问题解决/数仓-解决hive处理异常json命令行转义字符的问题.html">
+            
+                    
+                    数仓-解决hive处理异常json命令行转义字符的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    数据分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../数据分析/数据分析总结-pandas.html">
+            
+                <a href="../../数据分析/数据分析总结-pandas.html">
+            
+                    
+                    数据分析总结-pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据分析/数据分析总结-numpy.html">
+            
+                <a href="../../数据分析/数据分析总结-numpy.html">
+            
+                    
+                    数据分析总结-numpy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    应用环境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../应用环境/Docker环境启动流程.html">
+            
+                <a href="../../应用环境/Docker环境启动流程.html">
+            
+                    
+                    Docker环境启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >gp集群搭建②-新建用户免密登录</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65B0;&#x5EFA;&#x7528;&#x6237;">&#x65B0;&#x5EFA;&#x7528;&#x6237;</h1>
+<p>&#x65B0;&#x5EFA;greenplum&#x7528;&#x6237;</p>
+<p> &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;adduser&#x521B;&#x5EFA;&#x65B0;&#x7528;&#x6237;&#xFF08;adduser +&#x7528;&#x6237;&#x540D;&#xFF09;&#x8FD9;&#x6837;&#x5728;/home&#x76EE;&#x5F55;&#x4E0B;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x540C;&#x540D;&#x6587;&#x4EF6;&#x5939; &#x4E5F;&#x53EF;&#x7528;useradd  -m &#x7528;&#x6237;&#x540D;</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x521B;&#x5EFA;&#x7528;&#x6237;gb</span>
+useradd -m gp 
+<span class="hljs-comment">#&#x7ED9;&#x5DF2;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;testuser&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</span>
+passwd gp 
+greenplum
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5220;&#x9664;&#x7528;&#x6237;&#xFF0C;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x547D;&#x4EE4;&#x201C;userdel &#x7528;&#x6237;&#x540D;&#x201D;&#x5373;&#x53EF;&#x3002;&#x4E0D;&#x8FC7;&#x6700;&#x597D;&#x5C06;&#x5B83;&#x7559;&#x5728;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x4E5F;&#x5220;&#x9664;&#x6389;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;userdel -r &#x7528;&#x6237;&#x540D;&#x201D;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x76EE;&#x7684;&#x3002;</p>
+<pre><code class="lang-Bash">userdel -r &#x7528;&#x6237;&#x540D;
+</code></pre>
+</blockquote>
+<h1 id="ssh&#x514D;&#x5BC6;&#x767B;&#x5F55;">ssh&#x514D;&#x5BC6;&#x767B;&#x5F55;</h1>
+<h2 id="&#x672C;&#x673A;&#x81EA;&#x8EAB;&#x5B9E;&#x73B0;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF1A;">&#x672C;&#x673A;&#x81EA;&#x8EAB;&#x5B9E;&#x73B0;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF1A;</h2>
+<pre><code class="lang-Bash">su gp
+</code></pre>
+<p>&#x751F;&#x6210;&#x516C;&#x94A5;&#x3001;&#x79C1;&#x94A5;&#x5BF9;</p>
+<pre><code>ssh-keygen
+</code></pre><p>&#x4E00;&#x8DEF;enter</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g17xk706byj316k0m4n9l.jpg" alt=""></p>
+<p>&#x8FDB;&#x5165;&#x5230;&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x5728;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x7684;.ssh&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-shell">   cd ~/.ssh/
+</code></pre>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g17xl4ei4dj30vs06ctb2.jpg" alt=""></p>
+<p>&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x516C;&#x94A5;&#x8FFD;&#x52A0;&#x5230;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x521B;&#x5EFA;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x6743;&#x9650;&#x4E3A;&#x201C;600&#x201D;</p>
+<pre><code class="lang-Bash">touch authorized_keys
+chmod 600 authorized_keys
+</code></pre>
+<p>&#x8FFD;&#x52A0;&#x516C;&#x94A5;&#x5230;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#x4E2D;</p>
+<pre><code class="lang-Bash">cat id_rsa.pub &gt;&gt; authorized_keys
+</code></pre>
+<h2 id="&#x96C6;&#x7FA4;&#x673A;&#x5668;&#x76F8;&#x4E92;&#x514D;&#x5BC6;&#x767B;&#x5F55;">&#x96C6;&#x7FA4;&#x673A;&#x5668;&#x76F8;&#x4E92;&#x514D;&#x5BC6;&#x767B;&#x5F55;</h2>
+<p>&#x4E3B;&#x673A;&#x95F4;&#x5B9E;&#x73B0;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#xFF1A;</p>
+<p>&#x4E3B;&#x673A;&#x5206;&#x522B;&#x751F;&#x6210;&#x516C;&#x94A5;&#x3001;&#x79C1;&#x94A5;&#x5BF9;&#xFF08;&#x4E0A;&#x4E00;&#x6B65;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#xFF09;</p>
+<pre><code class="lang-bash">ssh-keygen
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x5230;&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x5728;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x7684;.ssh&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ~/.ssh/
+</code></pre>
+<p>node1&#x4E0A;(&#x5C0F;&#x5FC3;&#x522B;&#x628A;node2&#x7684;id_rsa.pub&#x8986;&#x76D6;&#x6389;)</p>
+<pre><code class="lang-bash">scp -P 36000 id_rsa.pub gp@10.105.201.140:~/.ssh/id_rsa.pub1
+</code></pre>
+<p>&#x4F7F;&#x7528;scp&#x547D;&#x4EE4;&#xFF0C;&#x5C06;A&#x4E3B;&#x673A;&#x516C;&#x94A5;&#x53D1;&#x9001;&#x7ED9;B&#x4E3B;&#x673A;&#xFF0C;&#x5C06;B&#x4E3B;&#x673A;&#x516C;&#x94A5;&#x53D1;&#x9001;&#x7ED9;A&#x4E3B;&#x673A;&#x3002;</p>
+<pre><code class="lang-bash">scp id_rsa.pub  gp@10.105.201.140:~/
+scp id_rsa.pub  gp@10.105.19.24:~/
+scp id_rsa.pub  gp@10.105.3.145:~/
+scp id_rsa.pub  gp@10.105.20.38:~/
+scp id_rsa.pub  gp@10.105.192.27:~/
+</code></pre>
+<p>&#x5206;&#x522B;&#x67E5;&#x770B;A&#xFF0C;B&#x4E3B;&#x673A;&#x662F;&#x5426;&#x6709;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x9700;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x7684;&#x4E3B;&#x673A;&#x516C;&#x94A5;&#x8FFD;&#x52A0;&#x5230;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x521B;&#x5EFA;&#x201C;authorized_keys&#x201D;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x6743;&#x9650;&#x4E3A;&#x201C;600&#x201D;</p>
+<blockquote>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x5404;&#x4E2A;&#x673A;&#x5668;&#x4E2D;id_rsa.pub &#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x62FC;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x76F4;&#x63A5;&#x8FFD;&#x52A0;&#x5230;&#x5404;&#x4E2A;&#x673A;&#x5668;&#x7684;authorized_keys&#x6587;&#x4EF6;&#x4E2D;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gp集群搭建①-下载greenplum.html" class="navigation navigation-prev " aria-label="Previous page: gp集群搭建①-下载greenplum">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gp集群搭建③-greenplum系统搭建.html" class="navigation navigation-next " aria-label="Next page: gp集群搭建③-greenplum系统搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"gp集群搭建②-新建用户免密登录","level":"1.3.4.5","depth":3,"next":{"title":"gp集群搭建③-greenplum系统搭建","level":"1.3.4.6","depth":3,"path":"部署记录/2gp集群搭建/gp集群搭建③-greenplum系统搭建.md","ref":"部署记录/2gp集群搭建/gp集群搭建③-greenplum系统搭建.md","articles":[]},"previous":{"title":"gp集群搭建①-下载greenplum","level":"1.3.4.4","depth":3,"path":"部署记录/2gp集群搭建/gp集群搭建①-下载greenplum.md","ref":"部署记录/2gp集群搭建/gp集群搭建①-下载greenplum.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://www.zhangjikai.com"}},"gitbook":"3.2.3","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"部署记录/2gp集群搭建/gp集群搭建②-新建用户免密登录.md","mtime":"2019-03-21T06:23:21.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T03:53:24.258Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
