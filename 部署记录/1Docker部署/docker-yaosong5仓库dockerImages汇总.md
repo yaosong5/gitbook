@@ -14,6 +14,8 @@
 
 1.0包含除elk的hue的镜像都在bigdatabase1.0中 
 
+​	slave，zk，hive，hbase，kafka测试一下目前都用的这个
+
 2.0将编译过hue4的镜像保存为yaosong5/bigdatabase:2.0  maker install header的改为
 
 ## bigdata:
@@ -29,6 +31,10 @@ es满足不了，必须要单独镜像，所以就回退，只是编译执行hue
 ```
 docker run -itd --net=br --name bb --hostname bb yaosong5/bigdatabase:1.0 &> /dev/null
 ```
+
+创建时将data/es目录下的basedir 镜像到es
+
+可用通过外部挂载文件夹来解决问题
 
 ## hue
 
@@ -53,7 +59,7 @@ docker run -it  --net=br --name hue -v /Users/yaosong/Yao/DockerSource/hueSource
 ## hbasezk
 
 ```
-需要检查
+可能是同时需要zk和hbase的时候，目前用的bigdatabase1.0
 ```
 
 
@@ -90,7 +96,7 @@ hive: bigdatabase1.0  hivedatavol
 
 hue:  gethue/hue:lates  只是把hue4目录下的配置文件替换了容器的配置文件
 
-kakfa： bigdatabase1.0   
+kakfa： bigdatabase1.0  
 kafka无挂载： bigdata1.0
 
 zk: bigatabase1.0  zkdatavol
